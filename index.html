@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K12 虚拟仿真实验室 (PhET + Ray Optics + CircuitJS1 + Concord Lab)</title>
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --bg-sidebar: #1e293b;
+      --bg-card: #334155;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 340px;
+      background-color: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+    .brand {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand h1 {
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand p {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+    .upstreams-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 8px;
+    }
+    .upstream-chip {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.06);
+      color: var(--text-muted);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.15s;
+    }
+    .upstream-chip:hover {
+      color: #fff;
+      border-color: var(--accent);
+    }
+    /* Filters */
+    .filters {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .search-box {
+      width: 100%;
+      background-color: var(--bg-dark);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--text-main);
+      padding: 7px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      outline: none;
+    }
+    .search-box:focus {
+      border-color: var(--accent);
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .tab-btn:hover {
+      color: var(--text-main);
+    }
+    .tab-btn.active {
+      background: rgba(56, 189, 248, 0.18);
+      color: var(--accent);
+      border-color: rgba(56, 189, 248, 0.4);
+      font-weight: 600;
+    }
+    /* List */
+    .nav-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px 12px;
+    }
+    .exp-item {
+      width: 100%;
+      text-align: left;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.05);
+      color: var(--text-main);
+      padding: 10px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 8px;
+      transition: all 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .exp-item:hover {
+      background-color: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.12);
+    }
+    .exp-item.active {
+      background-color: rgba(56, 189, 248, 0.14);
+      border-color: var(--accent);
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 13.5px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .badge.phet { background-color: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+    .badge.ray-optics { background-color: rgba(16, 185, 129, 0.2); color: #34d399; }
+    .badge.circuitjs1 { background-color: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+    .badge.concord-lab { background-color: rgba(168, 85, 247, 0.2); color: #c084fc; }
+    .exp-desc {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .exp-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 2px;
+    }
+    .meta-tag {
+      font-size: 10px;
+      padding: 1px 5px;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.06);
+      color: #cbd5e1;
+    }
+    /* Main area */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .topbar {
+      height: 54px;
+      background-color: var(--bg-sidebar);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      gap: 12px;
+    }
+    .current-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+    .current-info h2 {
+      font-size: 15px;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .mode-switch {
+      display: flex;
+      align-items: center;
+      background: var(--bg-dark);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 6px;
+      padding: 2px;
+      font-size: 11px;
+    }
+    .mode-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 4px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 11px;
+    }
+    .mode-btn.active {
+      background: var(--bg-card);
+      color: #fff;
+      font-weight: 600;
+    }
+    .btn {
+      background-color: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 6px 11px;
+      border-radius: 6px;
+      font-size: 12px;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: background 0.15s;
+    }
+    .btn:hover {
+      background-color: #475569;
+    }
+    .btn-primary {
+      background-color: var(--accent-hover);
+      border-color: var(--accent);
+    }
+    .btn-primary:hover {
+      background-color: #0369a1;
+    }
+    .stage {
+      flex: 1;
+      position: relative;
+      background-color: #000;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">
+      <h1>🔬 K12 开源虚拟仿真实验室</h1>
+      <p>配置驱动 (`config/experiments.json`)，四大顶尖开源引擎统一门户：</p>
+      <div class="upstreams-bar">
+        <a class="upstream-chip" href="https://github.com/phetsims" target="_blank">🟠 PhET</a>
+        <a class="upstream-chip" href="https://github.com/ricktu288/ray-optics" target="_blank">🟢 Ray Optics</a>
+        <a class="upstream-chip" href="https://github.com/sharpie7/circuitjs1" target="_blank">🔵 CircuitJS1</a>
+        <a class="upstream-chip" href="https://github.com/concord-consortium/lab" target="_blank">🟣 Concord Lab</a>
+      </div>
+    </div>
+
+    <div class="filters">
+      <input type="text" id="searchInput" class="search-box" placeholder="🔍 搜索实验名称、知识点（如：透镜、电路、DNA、分子）..." oninput="renderList()">
+      <div class="filter-tabs" id="subjectTabs">
+        <button class="tab-btn active" onclick="setSubject('all')">全部学科</button>
+        <button class="tab-btn" onclick="setSubject('physics')">⚡ 物理</button>
+        <button class="tab-btn" onclick="setSubject('chemistry')">🧪 化学</button>
+        <button class="tab-btn" onclick="setSubject('biology')">🧬 生物</button>
+        <button class="tab-btn" onclick="setSubject('earth')">🌍 地理/地科</button>
+      </div>
+      <div class="filter-tabs" id="sourceTabs">
+        <button class="tab-btn active" onclick="setSource('all')">全部引擎</button>
+        <button class="tab-btn" onclick="setSource('phet')">PhET</button>
+        <button class="tab-btn" onclick="setSource('ray-optics')">Ray Optics</button>
+        <button class="tab-btn" onclick="setSource('circuitjs1')">CircuitJS1</button>
+        <button class="tab-btn" onclick="setSource('concord-lab')">Concord Lab</button>
+      </div>
+    </div>
+
+    <div class="nav-list" id="navList"></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="current-info">
+        <span id="currentBadge" class="badge phet">PhET</span>
+        <h2 id="currentTitle">加载中...</h2>
+      </div>
+      <div class="actions">
+        <div class="mode-switch" title="切换使用在线官方源或本地已同步的子模块/离线包">
+          <button id="modeOnline" class="mode-btn active" onclick="setLoadMode('online')">🌐 在线源</button>
+          <button id="modeLocal" class="mode-btn" onclick="setLoadMode('local')">📂 本地仓库源</button>
+        </div>
+        <a id="repoLink" class="btn" href="#" target="_blank">
+          📦 上游 GitHub 源码
+        </a>
+        <a id="directLink" class="btn btn-primary" href="#" target="_blank">
+          ↗ 全屏打开
+        </a>
+      </div>
+    </header>
+    <div class="stage">
+      <iframe id="simFrame" src="about:blank" allowfullscreen></iframe>
+    </div>
+  </main>
+
+  <script>
+    let allExperiments = [];
+    let currentSubject = 'all';
+    let currentSource = 'all';
+    let currentExpId = null;
+    let loadMode = 'online'; // 'online' or 'local'
+
+    async function init() {
+      try {
+        const res = await fetch('./config/experiments.json');
+        const data = await res.json();
+        allExperiments = data.experiments || [];
+        if (allExperiments.length > 0) {
+          currentExpId = allExperiments[0].id;
+          renderList();
+          selectExpById(currentExpId);
+        }
+      } catch (err) {
+        console.error('Failed to load config/experiments.json:', err);
+      }
+    }
+
+    function setSubject(sub) {
+      currentSubject = sub;
+      const btns = document.querySelectorAll('#subjectTabs .tab-btn');
+      const map = ['all', 'physics', 'chemistry', 'biology', 'earth'];
+      btns.forEach((b, idx) => b.classList.toggle('active', map[idx] === sub));
+      renderList();
+    }
+
+    function setSource(src) {
+      currentSource = src;
+      const btns = document.querySelectorAll('#sourceTabs .tab-btn');
+      const map = ['all', 'phet', 'ray-optics', 'circuitjs1', 'concord-lab'];
+      btns.forEach((b, idx) => b.classList.toggle('active', map[idx] === src));
+      renderList();
+    }
+
+    function setLoadMode(mode) {
+      loadMode = mode;
+      document.getElementById('modeOnline').classList.toggle('active', mode === 'online');
+      document.getElementById('modeLocal').classList.toggle('active', mode === 'local');
+      if (currentExpId) {
+        selectExpById(currentExpId);
+      }
+    }
+
+    function renderList() {
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      const container = document.getElementById('navList');
+      container.innerHTML = '';
+
+      const filtered = allExperiments.filter(exp => {
+        if (currentSubject !== 'all' && exp.subject !== currentSubject) return false;
+        if (currentSource !== 'all' && exp.source !== currentSource) return false;
+        if (q) {
+          const text = `${exp.title} ${exp.description} ${(exp.tags || []).join(' ')} ${(exp.grade || []).join(' ')}`.toLowerCase();
+          if (!text.includes(q)) return false;
+        }
+        return true;
+      });
+
+      filtered.forEach(exp => {
+        const btn = document.createElement('button');
+        btn.className = `exp-item ${exp.id === currentExpId ? 'active' : ''}`;
+        btn.onclick = () => selectExpById(exp.id);
+
+        const grades = (exp.grade || []).map(g => `<span class="meta-tag">${g}</span>`).join('');
+        const tags = (exp.tags || []).slice(0, 3).map(t => `<span class="meta-tag">#${t}</span>`).join('');
+
+        btn.innerHTML = `
+          <div class="exp-header">
+            <span>${exp.title}</span>
+            <span class="badge ${exp.source}">${exp.sourceLabel}</span>
+          </div>
+          <div class="exp-desc">${exp.description}</div>
+          <div class="exp-meta">
+            <span class="meta-tag">${exp.subjectLabel}</span>
+            ${grades}
+            ${tags}
+          </div>
+        `;
+        container.appendChild(btn);
+      });
+    }
+
+    async function selectExpById(id) {
+      const exp = allExperiments.find(e => e.id === id);
+      if (!exp) return;
+      currentExpId = id;
+      renderList();
+
+      const badge = document.getElementById('currentBadge');
+      badge.className = `badge ${exp.source}`;
+      badge.textContent = exp.sourceLabel;
+
+      document.getElementById('currentTitle').textContent = exp.title;
+      document.getElementById('repoLink').href = exp.repoUrl;
+
+      let targetUrl = loadMode === 'local' ? exp.localUrl : exp.onlineUrl;
+
+      // In local mode, verify if the local file exists yet; fallback with prompt if not synced yet
+      if (loadMode === 'local') {
+        try {
+          const checkUrl = targetUrl.split('#')[0];
+          const headRes = await fetch(checkUrl, { method: 'HEAD' });
+          if (!headRes.ok) {
+            alert(`本地文件 ${checkUrl} 尚未下载或构建！\n请先运行 ./scripts/sync-all.sh 同步上游仓库，目前已自动为您回退到在线源。`);
+            targetUrl = exp.onlineUrl;
+          }
+        } catch (e) {
+          targetUrl = exp.onlineUrl;
+        }
+      }
+
+      document.getElementById('simFrame').src = targetUrl;
+      document.getElementById('directLink').href = targetUrl;
+    }
+
+    init();
+  </script>
+</body>
+</html>

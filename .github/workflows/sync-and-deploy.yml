@@ -1,0 +1,54 @@
+name: Sync Upstreams & Deploy K12 Virtual Lab
+
+on:
+  # 1. 每周一凌晨 03:00 自动检查上游 GitHub 仓库与 PhET 是否有更新
+  schedule:
+    - cron: '0 3 * * 1'
+  # 2. 支持在 GitHub 网页 Actions 标签页手动点击按钮立即触发同步
+  workflow_dispatch:
+  # 3. 当你修改了 config/experiments.json 或门户代码并 push 时自动部署
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Update Git Submodules (Ray Optics, CircuitJS1, Concord Lab)
+        run: |
+          git submodule update --init --recursive --remote --merge
+
+      - name: Sync latest PhET Chinese simulations
+        run: |
+          python3 scripts/sync-phet.py
+
+      - name: Commit updated submodules or PhET sims back to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [[ -n $(git status --porcelain) ]]; then
+            git add .
+            git commit -m "chore(sync): auto-sync upstream submodules and PhET simulations"
+            git push
+          else
+            echo "No upstream changes detected."
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
