@@ -327,9 +327,9 @@
         <h2 id="currentTitle">加载中...</h2>
       </div>
       <div class="actions">
-        <div class="mode-switch" title="切换使用在线官方源或本地已同步的子模块/离线包">
-          <button id="modeOnline" class="mode-btn active" onclick="setLoadMode('online')">🌐 在线源</button>
-          <button id="modeLocal" class="mode-btn" onclick="setLoadMode('local')">📂 本地仓库源</button>
+        <div class="mode-switch" title="切换优先读取仓库内自带离线文件或外部官方在线源">
+          <button id="modeLocal" class="mode-btn active" onclick="setLoadMode('local')">📂 本地/仓库内置源 (离线优先)</button>
+          <button id="modeOnline" class="mode-btn" onclick="setLoadMode('online')">🌐 外部官方源</button>
         </div>
         <a id="repoLink" class="btn" href="#" target="_blank">
           📦 上游 GitHub 源码
@@ -344,17 +344,21 @@
     </div>
   </main>
 
+  <script src="./config/experiments.js"></script>
   <script>
     let allExperiments = [];
     let currentSubject = 'all';
     let currentSource = 'all';
     let currentExpId = null;
-    let loadMode = 'online'; // 'online' or 'local'
+    let loadMode = 'local'; // 默认优先使用本仓库内置的离线实验文件
 
     async function init() {
       try {
-        const res = await fetch('./config/experiments.json');
-        const data = await res.json();
+        let data = window.K12_EXPERIMENTS_DATA;
+        if (!data) {
+          const res = await fetch('./config/experiments.json');
+          data = await res.json();
+        }
         allExperiments = data.experiments || [];
         if (allExperiments.length > 0) {
           currentExpId = allExperiments[0].id;
@@ -362,7 +366,7 @@
           selectExpById(currentExpId);
         }
       } catch (err) {
-        console.error('Failed to load config/experiments.json:', err);
+        console.error('Failed to load experiments config:', err);
       }
     }
 
@@ -445,17 +449,20 @@
 
       let targetUrl = loadMode === 'local' ? exp.localUrl : exp.onlineUrl;
 
-      // In local mode, verify if the local file exists yet; fallback with prompt if not synced yet
-      if (loadMode === 'local') {
-        try {
-          const checkUrl = targetUrl.split('#')[0];
-          const headRes = await fetch(checkUrl, { method: 'HEAD' });
-          if (!headRes.ok) {
-            alert(`本地文件 ${checkUrl} 尚未下载或构建！\n请先运行 ./scripts/sync-all.sh 同步上游仓库，目前已自动为您回退到在线源。`);
+      // 当用户选择本地/仓库内置源时，对于尚未内置到本地目录的外部引擎自动无感回退到在线源
+      if (loadMode === 'local' && exp.source !== 'phet' && exp.source !== 'tongjiang-lab') {
+        if (window.location.protocol === 'file:') {
+          targetUrl = exp.onlineUrl;
+        } else {
+          try {
+            const checkUrl = targetUrl.split('#')[0].split('?')[0];
+            const headRes = await fetch(checkUrl, { method: 'HEAD' });
+            if (!headRes.ok) {
+              targetUrl = exp.onlineUrl;
+            }
+          } catch (e) {
             targetUrl = exp.onlineUrl;
           }
-        } catch (e) {
-          targetUrl = exp.onlineUrl;
         }
       }
 

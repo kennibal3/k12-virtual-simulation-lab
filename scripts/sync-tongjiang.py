@@ -91,6 +91,10 @@ def sync_tongjiang():
     with open(CONFIG_PATH, "w", encoding="utf-8") as f:
         json.dump(config, f, ensure_ascii=False, indent=2)
 
+    js_path = ROOT_DIR / "config" / "experiments.js"
+    with open(js_path, "w", encoding="utf-8") as f:
+        f.write("window.K12_EXPERIMENTS_DATA = " + json.dumps(config, ensure_ascii=False, indent=2) + ";\n")
+
     print(f"✅ 成功从铜匠实验室 catalog.json 导入 {len(tj_exps)} 门中国高中 3D 虚拟实验！当前平台总实验数: {len(config['experiments'])}")
 
 
