@@ -64,8 +64,8 @@
       "grade": ["初中", "高中"],
       "tags": ["光学沙盒", "棱镜色散", "全反射", "光纤", "望远镜"],
       "description": "无限画布光学沙盒：自由摆放激光束、平面镜、三棱镜、理想透镜、球面透镜、光栅与渐变折射率介质。",
-      "onlineUrl": "https://phydemo.app/ray-optics/cn/simulator/",
-      "localUrl": "./packages/ray-optics/dist/cn/simulator/index.html",
+      "onlineUrl": "https://phydemo.app/ray-optics/simulator/?zh-CN",
+      "localUrl": "./packages/ray-optics/dist/simulator/index.html?zh-CN",
       "repoUrl": "https://github.com/ricktu288/ray-optics"
     },
     {
