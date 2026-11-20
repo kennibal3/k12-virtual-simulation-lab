@@ -1,0 +1,3 @@
+[submodule "packages/tongjiang-lab"]
+	path = packages/tongjiang-lab
+	url = https://github.com/sdvch/tongjiang-lab.git

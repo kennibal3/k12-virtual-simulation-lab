@@ -25,9 +25,13 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Update Git Submodules (Ray Optics, CircuitJS1, Concord Lab)
+      - name: Update Git Submodules (Tongjiang Lab, Ray Optics, CircuitJS1, Concord Lab)
         run: |
           git submodule update --init --recursive --remote --merge
+
+      - name: Sync Tongjiang Lab 3D catalog into experiments.json
+        run: |
+          python3 scripts/sync-tongjiang.py
 
       - name: Sync latest PhET Chinese simulations
         run: |

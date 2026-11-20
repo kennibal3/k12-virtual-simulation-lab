@@ -168,6 +168,7 @@
     .badge.ray-optics { background-color: rgba(16, 185, 129, 0.2); color: #34d399; }
     .badge.circuitjs1 { background-color: rgba(59, 130, 246, 0.2); color: #60a5fa; }
     .badge.concord-lab { background-color: rgba(168, 85, 247, 0.2); color: #c084fc; }
+    .badge.tongjiang-lab { background-color: rgba(244, 63, 94, 0.2); color: #fb7185; }
     .exp-desc {
       font-size: 11.5px;
       color: var(--text-muted);
@@ -287,8 +288,9 @@
   <aside class="sidebar">
     <div class="brand">
       <h1>🔬 K12 开源虚拟仿真实验室</h1>
-      <p>配置驱动 (`config/experiments.json`)，四大顶尖开源引擎统一门户：</p>
+      <p>配置驱动 (`config/experiments.json`)，五大顶尖开源引擎统一门户：</p>
       <div class="upstreams-bar">
+        <a class="upstream-chip" href="https://github.com/sdvch/tongjiang-lab" target="_blank">🔴 铜匠 3D</a>
         <a class="upstream-chip" href="https://github.com/phetsims" target="_blank">🟠 PhET</a>
         <a class="upstream-chip" href="https://github.com/ricktu288/ray-optics" target="_blank">🟢 Ray Optics</a>
         <a class="upstream-chip" href="https://github.com/sharpie7/circuitjs1" target="_blank">🔵 CircuitJS1</a>
@@ -307,6 +309,7 @@
       </div>
       <div class="filter-tabs" id="sourceTabs">
         <button class="tab-btn active" onclick="setSource('all')">全部引擎</button>
+        <button class="tab-btn" onclick="setSource('tongjiang-lab')">🔴 铜匠 3D</button>
         <button class="tab-btn" onclick="setSource('phet')">PhET</button>
         <button class="tab-btn" onclick="setSource('ray-optics')">Ray Optics</button>
         <button class="tab-btn" onclick="setSource('circuitjs1')">CircuitJS1</button>
@@ -374,7 +377,7 @@
     function setSource(src) {
       currentSource = src;
       const btns = document.querySelectorAll('#sourceTabs .tab-btn');
-      const map = ['all', 'phet', 'ray-optics', 'circuitjs1', 'concord-lab'];
+      const map = ['all', 'tongjiang-lab', 'phet', 'ray-optics', 'circuitjs1', 'concord-lab'];
       btns.forEach((b, idx) => b.classList.toggle('active', map[idx] === src));
       renderList();
     }

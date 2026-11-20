@@ -36,6 +36,15 @@
       "syncType": "git-submodule",
       "badgeColor": "#a855f7",
       "description": "Next-Gen Molecular Workbench 微观分子动力学、化学键、生物 DNA 与地球科学仿真引擎"
+    },
+    {
+      "id": "tongjiang-lab",
+      "name": "铜匠实验室 (Tongjiang Lab)",
+      "repo": "https://github.com/sdvch/tongjiang-lab",
+      "submodulePath": "packages/tongjiang-lab",
+      "syncType": "git-submodule",
+      "badgeColor": "#f43f5e",
+      "description": "面向中国高中新课标的 3D 互动科学实验课程（物理、化学、生物、地理 54 门单文件 3D 实验）"
     }
   ],
   "experiments": [
@@ -46,8 +55,16 @@
       "sourceLabel": "PhET",
       "subject": "physics",
       "subjectLabel": "物理",
-      "grade": ["初中", "高中"],
-      "tags": ["光学", "凸透镜", "凹透镜", "实像与虚像"],
+      "grade": [
+        "初中",
+        "高中"
+      ],
+      "tags": [
+        "光学",
+        "凸透镜",
+        "凹透镜",
+        "实像与虚像"
+      ],
       "description": "卡通引导式光学实验：拖动蜡烛/铅笔或透镜，直观探究物距、像距、焦距与成像大小虚实规律。",
       "onlineUrl": "https://phet.colorado.edu/sims/html/geometric-optics/latest/geometric-optics_zh_CN.html",
       "localUrl": "./phet-sims/geometric-optics_zh_CN.html",
@@ -61,8 +78,17 @@
       "sourceLabel": "Ray Optics",
       "subject": "physics",
       "subjectLabel": "物理",
-      "grade": ["初中", "高中"],
-      "tags": ["光学沙盒", "棱镜色散", "全反射", "光纤", "望远镜"],
+      "grade": [
+        "初中",
+        "高中"
+      ],
+      "tags": [
+        "光学沙盒",
+        "棱镜色散",
+        "全反射",
+        "光纤",
+        "望远镜"
+      ],
       "description": "无限画布光学沙盒：自由摆放激光束、平面镜、三棱镜、理想透镜、球面透镜、光栅与渐变折射率介质。",
       "onlineUrl": "https://phydemo.app/ray-optics/simulator/?zh-CN",
       "localUrl": "./packages/ray-optics/dist/simulator/index.html?zh-CN",
@@ -75,8 +101,18 @@
       "sourceLabel": "PhET",
       "subject": "physics",
       "subjectLabel": "物理",
-      "grade": ["小学", "初中", "高中"],
-      "tags": ["电学", "串并联", "欧姆定律", "电压表", "电流表"],
+      "grade": [
+        "小学",
+        "初中",
+        "高中"
+      ],
+      "tags": [
+        "电学",
+        "串并联",
+        "欧姆定律",
+        "电压表",
+        "电流表"
+      ],
       "description": "实物风格电学实验：自由拖拽电池、灯泡、电阻、开关接线，支持切换电路图符号视图与短路起火动画。",
       "onlineUrl": "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc-virtual-lab/latest/circuit-construction-kit-dc-virtual-lab_zh_CN.html",
       "localUrl": "./phet-sims/circuit-construction-kit-dc-virtual-lab_zh_CN.html",
@@ -90,8 +126,17 @@
       "sourceLabel": "CircuitJS1",
       "subject": "physics",
       "subjectLabel": "物理",
-      "grade": ["初中", "高中"],
-      "tags": ["电学进阶", "动态电流", "交直流电路", "示波器", "电容电感"],
+      "grade": [
+        "初中",
+        "高中"
+      ],
+      "tags": [
+        "电学进阶",
+        "动态电流",
+        "交直流电路",
+        "示波器",
+        "电容电感"
+      ],
       "description": "初高中电学可视化神器：将枯燥的电路原理图变成实时流动的电子动画，用颜色深浅直观显示各点电势高低，内置实时示波器。",
       "onlineUrl": "https://www.falstad.com/circuit/circuitjs.html",
       "localUrl": "./packages/circuitjs1/war/circuitjs.html",
@@ -104,8 +149,17 @@
       "sourceLabel": "PhET",
       "subject": "physics",
       "subjectLabel": "物理",
-      "grade": ["初中", "高中"],
-      "tags": ["力学", "动能", "重力势能", "机械能守恒", "摩擦力"],
+      "grade": [
+        "初中",
+        "高中"
+      ],
+      "tags": [
+        "力学",
+        "动能",
+        "重力势能",
+        "机械能守恒",
+        "摩擦力"
+      ],
       "description": "实时显示滑板运动过程中的动能、重力势能、热能柱状图转化，支持自定义轨道曲线与不同星球重力加速度。",
       "onlineUrl": "https://phet.colorado.edu/sims/html/energy-skate-park/latest/energy-skate-park_zh_CN.html",
       "localUrl": "./phet-sims/energy-skate-park_zh_CN.html",
@@ -119,8 +173,15 @@
       "sourceLabel": "PhET",
       "subject": "physics",
       "subjectLabel": "物理",
-      "grade": ["初中"],
-      "tags": ["力学", "浮力", "密度", "阿基米德原理"],
+      "grade": [
+        "初中"
+      ],
+      "tags": [
+        "力学",
+        "浮力",
+        "密度",
+        "阿基米德原理"
+      ],
       "description": "通过水下测力计、排水量与不同材质物块，探究浮力大小与排开液体重力的定量关系。",
       "onlineUrl": "https://phet.colorado.edu/sims/html/buoyancy/latest/buoyancy_zh_CN.html",
       "localUrl": "./phet-sims/buoyancy_zh_CN.html",
@@ -134,8 +195,16 @@
       "sourceLabel": "PhET",
       "subject": "physics",
       "subjectLabel": "物理",
-      "grade": ["高中"],
-      "tags": ["力学", "平抛运动", "斜抛", "空气阻力", "速度分解"],
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "力学",
+        "平抛运动",
+        "斜抛",
+        "空气阻力",
+        "速度分解"
+      ],
       "description": "发射不同质量、直径的大炮炮弹，观察带/不带空气阻力时的抛物线轨迹及水平/竖直速度矢量分解。",
       "onlineUrl": "https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_zh_CN.html",
       "localUrl": "./phet-sims/projectile-motion_zh_CN.html",
@@ -149,8 +218,16 @@
       "sourceLabel": "Concord Lab",
       "subject": "chemistry",
       "subjectLabel": "化学",
-      "grade": ["初中", "高中"],
-      "tags": ["分子动力学", "分子间作用力", "三态变化", "范德华力"],
+      "grade": [
+        "初中",
+        "高中"
+      ],
+      "tags": [
+        "分子动力学",
+        "分子间作用力",
+        "三态变化",
+        "范德华力"
+      ],
       "description": "基于 Next-Gen Molecular Workbench 分子动力学引擎：实时模拟加热/冷却时微观分子的碰撞、分子间引力及相变过程。",
       "onlineUrl": "https://lab.concord.org/embeddable.html#interactives/sam/phase-change/2-two-types-of-gases.json",
       "localUrl": "./packages/concord-lab/public/embeddable.html#interactives/sam/phase-change/2-two-types-of-gases.json",
@@ -163,8 +240,15 @@
       "sourceLabel": "Concord Lab",
       "subject": "chemistry",
       "subjectLabel": "化学",
-      "grade": ["高中"],
-      "tags": ["化学反应原理", "活化能", "化学键", "有效碰撞"],
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "化学反应原理",
+        "活化能",
+        "化学键",
+        "有效碰撞"
+      ],
       "description": "从原子碰撞与能量视角观察化学反应：调节温度与浓度，观察分子碰撞克服活化能、旧键断裂与新键形成的过程。",
       "onlineUrl": "https://lab.concord.org/embeddable.html#interactives/sam/chemical-reactions/1-what-is-a-chemical-reaction.json",
       "localUrl": "./packages/concord-lab/public/embeddable.html#interactives/sam/chemical-reactions/1-what-is-a-chemical-reaction.json",
@@ -177,8 +261,16 @@
       "sourceLabel": "PhET",
       "subject": "chemistry",
       "subjectLabel": "化学",
-      "grade": ["初中", "高中"],
-      "tags": ["酸碱电离", "pH试纸", "导电性", "强弱电解质"],
+      "grade": [
+        "初中",
+        "高中"
+      ],
+      "tags": [
+        "酸碱电离",
+        "pH试纸",
+        "导电性",
+        "强弱电解质"
+      ],
       "description": "对比强酸、弱酸、强碱、弱碱在水中的电离程度，使用 pH 计、pH 试纸及灯泡导电实验进行测试。",
       "onlineUrl": "https://phet.colorado.edu/sims/html/acid-base-solutions/latest/acid-base-solutions_zh_CN.html",
       "localUrl": "./phet-sims/acid-base-solutions_zh_CN.html",
@@ -192,8 +284,16 @@
       "sourceLabel": "PhET",
       "subject": "chemistry",
       "subjectLabel": "化学",
-      "grade": ["初中", "高中"],
-      "tags": ["原子结构", "元素周期表", "离子", "同位素"],
+      "grade": [
+        "初中",
+        "高中"
+      ],
+      "tags": [
+        "原子结构",
+        "元素周期表",
+        "离子",
+        "同位素"
+      ],
       "description": "亲手将质子、中子、电子拖入原子轨道，实时查看元素周期表位置、质量数、净电荷及原子核稳定性。",
       "onlineUrl": "https://phet.colorado.edu/sims/html/build-an-atom/latest/build-an-atom_zh_CN.html",
       "localUrl": "./phet-sims/build-an-atom_zh_CN.html",
@@ -207,8 +307,16 @@
       "sourceLabel": "Concord Lab",
       "subject": "biology",
       "subjectLabel": "生物",
-      "grade": ["高中"],
-      "tags": ["遗传学", "DNA转录", "mRNA翻译", "核糖体", "基因突变"],
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "遗传学",
+        "DNA转录",
+        "mRNA翻译",
+        "核糖体",
+        "基因突变"
+      ],
       "description": "Concord 生物标杆实验：动态模拟 DNA 双螺旋解旋、mRNA 转录、tRNA 携带氨基酸在核糖体上折叠成蛋白质的全过程，还支持手动修改碱基观察基因突变。",
       "onlineUrl": "https://lab.concord.org/embeddable.html#interactives/sam/DNA-to-proteins/1-dna-to-protein.json",
       "localUrl": "./packages/concord-lab/public/embeddable.html#interactives/sam/DNA-to-proteins/1-dna-to-protein.json",
@@ -221,8 +329,16 @@
       "sourceLabel": "PhET",
       "subject": "biology",
       "subjectLabel": "生物",
-      "grade": ["初中", "高中"],
-      "tags": ["生物进化", "自然选择", "基因突变", "种群数量"],
+      "grade": [
+        "初中",
+        "高中"
+      ],
+      "tags": [
+        "生物进化",
+        "自然选择",
+        "基因突变",
+        "种群数量"
+      ],
       "description": "引入毛色、牙齿、耳朵基因突变，并投放天敌（狼）或改变极地/赤道气候环境，统计多代种群基因频率变化曲线。",
       "onlineUrl": "https://phet.colorado.edu/sims/html/natural-selection/latest/natural-selection_zh_CN.html",
       "localUrl": "./phet-sims/natural-selection_zh_CN.html",
@@ -236,13 +352,1155 @@
       "sourceLabel": "PhET",
       "subject": "earth",
       "subjectLabel": "地理/地科",
-      "grade": ["初中", "高中"],
-      "tags": ["地球科学", "温室气体", "红外辐射", "气候变化"],
+      "grade": [
+        "初中",
+        "高中"
+      ],
+      "tags": [
+        "地球科学",
+        "温室气体",
+        "红外辐射",
+        "气候变化"
+      ],
       "description": "从光子与大气波段视角观察太阳短波辐射与地面长波红外辐射如何与二氧化碳、甲烷等温室气体相互作用。",
       "onlineUrl": "https://phet.colorado.edu/sims/html/greenhouse-effect/latest/greenhouse-effect_zh_CN.html",
       "localUrl": "./phet-sims/greenhouse-effect_zh_CN.html",
       "repoUrl": "https://github.com/phetsims/greenhouse-effect",
       "phetSlug": "greenhouse-effect"
+    },
+    {
+      "id": "tj-insolation-step",
+      "title": "太阳直射点的回归运动与四季、五带 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "黄赤交角",
+        "回归运动",
+        "正午高度"
+      ],
+      "description": "学校所在地的正午太阳高度和正午太阳方向，一年里为什么有规律地变化？ 【课标：选择性必修1 自然地理基础 · 第一章 地球的运动 · 第二节 地球运动的地理意义 · 太阳直射点的回归运动 · 四季和五带】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/insolation-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/insolation-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-ball-stick-step",
+      "title": "搭建球棍模型认识有机化合物分子结构 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象模拟",
+        "零件盒",
+        "甲烷",
+        "二氯甲烷"
+      ],
+      "description": "分子画在纸上是平的，真实的三维形状到底是什么样？搭一座球棍模型能看出什么？ 【课标：必修第二册 · 第七章 有机化合物 · 实验活动8 搭建球棍模型认识有机化合物分子结构】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/ball-stick-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/ball-stick-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-photoelectric-step",
+      "title": "光电效应 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与实验",
+        "认识电路",
+        "加到饱和",
+        "反向扫描"
+      ],
+      "description": "同一束光，为什么换成另一种金属就一个电子都打不出来？光电子的能量到底由光的什么决定？ 【课标：选择性必修第三册 · 第四章 原子结构和波粒二象性 · 第二节 光电效应】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/photoelectric-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/photoelectric-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-galvanic-step",
+      "title": "原电池：单液到双液 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "两台装置",
+        "接通导线",
+        "谁在流"
+      ],
+      "description": "同一杯稀硫酸里已经有电流了，为什么还要换成两杯、再加一根盐桥？ 【课标：必修第二册 · 第六章 化学反应与能量 · 第一节 化学反应与能量变化 · 实验活动6 化学能转化成电能】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/galvanic-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/galvanic-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-mitosis-step",
+      "title": "观察根尖分生区组织细胞的有丝分裂 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "biology",
+      "subjectLabel": "生物",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "制片",
+        "找分生区",
+        "前期"
+      ],
+      "description": "一根洋葱根尖上，哪些细胞正在分裂？它们分裂一次各要多久？ 【课标：必修1 分子与细胞 · 第6章 细胞的生命历程 · 第1节 细胞的增殖 · 探究·实践：观察根尖分生区组织细胞的有丝分裂】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/mitosis-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/mitosis-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-current-field-step",
+      "title": "电流的磁场 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "铁屑显形",
+        "一圈圈同心圆",
+        "握导线定方向"
+      ],
+      "description": "磁场看不见摸不着，怎么把它画出来、又怎么判断它的方向？ 【课标：必修第三册 · 第十三章 电磁感应与电磁波初步 · 第一节 磁场 磁感线】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/current-field-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/current-field-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-haber-step",
+      "title": "合成氨工业 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "工业流程",
+        "为什么建厂",
+        "为什么净化",
+        "为什么加压"
+      ],
+      "description": "怎样把空气里的氮又快、又多、又省地变成氨？ 【课标：选择性必修1 化学反应原理 · 第二章 化学反应速率与化学平衡 · 第四节 化学反应的调控】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/haber-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/haber-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-river-step",
+      "title": "河流地貌的发育 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识沙盘",
+        "山区V形谷",
+        "河谷剖面"
+      ],
+      "description": "长江镇江段的岸线为什么持续向北推移？ 【课标：选择性必修1 自然地理基础 · 第二章 地表形态的塑造 · 第三节 河流地貌的发育】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/river-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/river-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-rate-step",
+      "title": "化学反应速率的影响因素 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识实验台",
+        "浓度",
+        "温度"
+      ],
+      "description": "同样两个反应，为什么有的几秒就完、有的等半天？快慢到底由什么决定？ 【课标：必修第二册 · 第六章 化学反应与能量 · 实验活动7 化学反应速率的影响因素】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/rate-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/rate-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-titration-step",
+      "title": "强酸与强碱的中和滴定 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识滴定装置",
+        "润洗与赶气泡",
+        "取液与加指示剂"
+      ],
+      "description": "前面加了 20 多毫升几乎看不出变化，为什么最后半滴颜色就全变了？ 【课标：选择性必修1 化学反应原理 · 第三章 水溶液中的离子反应与平衡 · 第二节 水的电离和溶液的pH · 酸碱中和滴定 · 实验活动2】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/titration-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/titration-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-chlorine-step",
+      "title": "氯气的制备及性质 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识装置",
+        "为什么加热",
+        "为什么要浓盐酸"
+      ],
+      "description": "要一瓶干燥、纯净的氯气，装置里每一段各管什么？少一段会怎样？ 【课标：必修第一册 · 第二章 海水中的重要元素——钠和氯 · 第二节 氯及其化合物】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/chlorine-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/chlorine-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-blast-furnace-step",
+      "title": "高炉炼铁 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "工业流程",
+        "矿石变铁",
+        "分层布料",
+        "剖开看层"
+      ],
+      "description": "一堆矿石从炉顶倒下去，怎么几小时后就变成一股铁水，还越省越好？ 【课标：必修第二册 · 第八章 化学与可持续发展 · 第一节 自然资源的开发利用 · 金属矿物的开发利用】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/blast-furnace-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/blast-furnace-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-smelting-step",
+      "title": "金属冶炼：电解熔融盐 + 铝热 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "工业流程",
+        "三处台子",
+        "只能电解",
+        "剖开槽"
+      ],
+      "description": "为什么铝只能靠电「拆」出来，而铁能被铝「换」出来？ 【课标：必修第二册 · 第八章 化学与可持续发展 · 第一节 自然资源的开发利用 · 金属矿物的开发利用】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/smelting-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/smelting-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-currents-step",
+      "title": "世界洋流的分布规律与影响 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "风推水走",
+        "中低纬成圈",
+        "中高纬反着转"
+      ],
+      "description": "数万只玩具鸭散落海面，为什么会漂到世界各地的海岸？ 【课标：选择性必修1 自然地理基础 · 第四章 水的运动 · 第二节 洋流】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/currents-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/currents-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-enso-step",
+      "title": "海—气相互作用与厄尔尼诺、拉尼娜 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "交换",
+        "差",
+        "环流"
+      ],
+      "description": "秘鲁沿海常年干旱，为什么 2016 年底海水一暖，就下起了暴雨、还死了近百人？ 【课标：选择性必修1 自然地理基础 · 第四章 水的运动 · 第三节 海—气相互作用】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/enso-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/enso-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-coal-gas-step",
+      "title": "煤的综合利用：以煤的气化为主线 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "工业流程",
+        "为什么气化",
+        "供热还是供气",
+        "炉子里长什么样"
+      ],
+      "description": "煤只能烧吗？怎么把煤变成能造化肥、造甲醇的气？ 【课标：必修第二册 · 第八章 化学与可持续发展 · 第一节 自然资源的开发利用 · 煤的综合利用】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/coal-gas-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/coal-gas-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-sulfuric-step",
+      "title": "接触法制硫酸 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "工业流程",
+        "为什么分五段",
+        "为什么先净化",
+        "为什么这个温度"
+      ],
+      "description": "怎样把矿石里的硫，又快、又多、又省、又干净地变成硫酸？ 【课标：必修第二册 · 第五章 化工生产中的重要非金属元素 · 第一节 硫及其化合物 · 工业制硫酸】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/sulfuric-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/sulfuric-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-hydrolysis-step",
+      "title": "盐类的水解及其应用 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识实验",
+        "盐的类型",
+        "看进去"
+      ],
+      "description": "盐电离出来的离子看上去「既不酸也不碱」，凭什么能让溶液显出酸碱性？ 【课标：选择性必修1 化学反应原理 · 第三章 水溶液中的离子反应与平衡 · 第三节 盐类的水解 · 实验活动3 盐类水解的应用】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/hydrolysis-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/hydrolysis-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-heating-step",
+      "title": "大气受热过程 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "削弱",
+        "地面吸收",
+        "长波"
+      ],
+      "description": "太阳晒了一整天的地面，为什么白天先热起来，夜里又凉得那么快——大气到底替地面留住了多少热？ 【课标：必修第一册 · 第二章 地球上的大气 · 第二节 大气受热过程和大气运动 · 大气受热过程】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/heating-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/heating-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-karst-step",
+      "title": "喀斯特地貌的形成与识别 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "溶",
+        "沟→洼",
+        "峰丛→峰林"
+      ],
+      "description": "徐霞客写的「峭峰离立，分行竞颖」——这些像从地里长出来的尖峰，是怎么一块岩层变出来的？ 【课标：必修第一册 · 第四章 地貌 · 第一节 常见地貌类型 · 喀斯特地貌】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/karst-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/karst-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-cement-step",
+      "title": "工业制水泥 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "工业流程",
+        "看全厂",
+        "备生料",
+        "预热分解"
+      ],
+      "description": "一车石头和土，凭什么磨一磨、烧一烧、再磨一磨，就变成能撑起大坝的水泥？ 【课标：必修第二册 · 第五章 化工生产中的重要非金属元素 · 第三节 无机非金属材料】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/cement-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/cement-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-carbon-step",
+      "title": "全球气候变化与国家安全 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "碳循环",
+        "两条输入",
+        "排放去向"
+      ],
+      "description": "马尔代夫为什么要把内阁会议开到 6 米深的海底去？ 【课标：选择性必修3 资源、环境与国家安全 · 第三章 环境安全与国家安全 · 第四节 全球气候变化与国家安全】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/carbon-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/carbon-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-tectonic-step",
+      "title": "构造地貌的形成 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "弯",
+        "分",
+        "倒置"
+      ],
+      "description": "青藏高原上为什么会找到阔叶树的叶子化石 —— 什么力量把地表抬起来、又把它切开？ 【课标：选择性必修1 自然地理基础 · 第二章 地表形态的塑造 · 第二节 构造地貌的形成】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/tectonic-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/tectonic-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-capacitor-step",
+      "title": "观察电容器的充放电 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与实验",
+        "认识器材",
+        "合向 1 充电",
+        "合向 2 放电"
+      ],
+      "description": "电容器里到底存了什么？能不能只用一个数把它的「肚量」量出来？ 【课标：必修第三册 · 第十章 静电场中的能量 · 第四节 电容器的电容 · 学生必做实验：观察电容器的充放电】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/capacitor-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/capacitor-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-earth-motion-step",
+      "title": "地球运动的地理意义 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "自转",
+        "公转",
+        "昼夜半球"
+      ],
+      "description": "同一时刻，为什么北京是中午、纽约是半夜，而夏天的白天又比冬天长？ 【课标：选择性必修1 自然地理基础 · 第一章 地球的运动 · 第二节 地球运动的地理意义】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/earth-motion-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/earth-motion-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-accel-force-step",
+      "title": "实验：探究加速度与力、质量的关系 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识器材",
+        "平衡阻力",
+        "打纸带"
+      ],
+      "description": "不直接测力、也不直接测加速度——一张纸带加几个槽码，能不能把 a 与 F、m 的关系量出来？ 【课标：必修第一册 · 第四章 运动和力的关系 · 第二节 实验：探究加速度与力、质量的关系】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/accel-force-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/accel-force-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-iron-step",
+      "title": "铁及其化合物：铁的价态转化 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识实验",
+        "白色沉淀",
+        "隔绝空气"
+      ],
+      "description": "同一个铁元素，为什么在试管里一会儿是 +2 价、一会儿是 +3 价，我们凭什么知道它是哪一个？ 【课标：必修第一册 · 第三章 铁 金属材料 · 第一节 铁及其化合物】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/iron-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/iron-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-plasmolysis-step",
+      "title": "植物细胞的吸水和失水 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "biology",
+      "subjectLabel": "生物",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "渗透",
+        "原生质层",
+        "失水"
+      ],
+      "description": "菜叶泡在清水里会变硬挺，撒了盐会出水——植物细胞怎样吸水和失水？ 【课标：必修1 分子与细胞 · 第4章 细胞的物质输入和输出 · 第1节 被动运输 · 探究·实践：探究植物细胞的吸水和失水】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/plasmolysis-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/plasmolysis-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-electrolysis-step",
+      "title": "电解原理：电解氯化铜溶液与饱和食盐水 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识实验",
+        "接通电源",
+        "通得更久"
+      ],
+      "description": "同一个直流电源，为什么电解氯化铜溶液得到铜和氯气，电解饱和食盐水却得到氢气、氯气和氢氧化钠？ 【课标：选择性必修1 化学反应原理 · 第四章 化学反应与电能 · 第二节 电解池 · 电解氯化铜溶液 · 电解饱和食盐水】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/electrolysis-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/electrolysis-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-ammonia-step",
+      "title": "氨的制备与性质（含喷泉实验） (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "整套装置",
+        "管口朝哪边",
+        "干燥剂选谁"
+      ],
+      "description": "一瓶氨气，凭什么能把烧杯里的水自己「吸」到瓶子里去？ 【课标：必修第二册 · 第五章 化工生产中的重要非金属元素 · 第二节 氮及其化合物 · 氨和铵盐】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/ammonia-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/ammonia-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-equilibrium-step",
+      "title": "探究影响化学平衡移动的因素 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与实验",
+        "认识实验台",
+        "铁管加料",
+        "铁粉减料"
+      ],
+      "description": "改变一个条件，凭什么说平衡「往哪边移」？ 【课标：选择性必修1 化学反应原理 · 第二章 化学反应速率与化学平衡 · 实验活动1 探究影响化学平衡移动的因素】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/equilibrium-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/equilibrium-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-flame-step",
+      "title": "焰色试验与原子光谱 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识实验",
+        "洗净铂丝",
+        "钠双线"
+      ],
+      "description": "金属在火焰里为什么各有各的颜色，这点颜色凭什么能当成「化验报告」？ 【课标：必修第一册 · 第二章 海水中的重要元素——钠和氯 · 第一节 钠及其化合物 · 焰色试验】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/flame-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/flame-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-conductivity-step",
+      "title": "电解质的电离与溶液导电性、离子反应的实质 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识台面",
+        "干燥与熔融",
+        "溶于水"
+      ],
+      "description": "干手、湿手都是同一只手，为什么湿了反而容易触电？ 【课标：必修第一册 · 第一章 物质及其变化 · 第二节 离子反应】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/conductivity-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/conductivity-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-energy-step",
+      "title": "实验：验证机械能守恒定律 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识器材",
+        "先通电后释放",
+        "选点"
+      ],
+      "description": "重物下落时，减少的重力势能是不是正好变成了增加的动能？一条纸带能不能把这件事量出来？ 【课标：必修第二册 · 第八章 机械能守恒定律 · 第五节 实验：验证机械能守恒定律】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/energy-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/energy-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-soil-step",
+      "title": "土壤的主要形成因素与土壤剖面观察 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "剖面",
+        "母质",
+        "生物"
+      ],
+      "description": "东北的土又黑又肥，南方的土为什么相对贫瘠？ 【课标：必修第一册 · 第五章 植被与土壤 · 第二节 土壤】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/soil-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/soil-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-projectile-step",
+      "title": "实验：探究平抛运动的特点 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识器材",
+        "先做竖直",
+        "末端要水平"
+      ],
+      "description": "只靠一只斜槽和一块挡板，能不能把平抛拆成两个分运动、量出初速度？ 【课标：必修第二册 · 第五章 抛体运动 · 第三节 实验：探究平抛运动的特点】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/projectile-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/projectile-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-transport-step",
+      "title": "物质跨膜运输 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "biology",
+      "subjectLabel": "生物",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "自由扩散",
+        "选择透过",
+        "协助扩散"
+      ],
+      "description": "同一片细胞膜，为什么氧能自己穿过去、葡萄糖要好几个蛋白帮忙、K⁺ 还能逆着浓度往里走？ 【课标：必修1 分子与细胞 · 第4章 细胞的物质输入和输出】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/transport-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/transport-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-nitric-lab-step",
+      "title": "浓、稀硝酸的性质与氮氧化物的转化 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "整套装置",
+        "铜丝插进去",
+        "换成稀硝酸"
+      ],
+      "description": "同样是铜和硝酸，为什么一瓶冒红棕色气体、另一瓶什么颜色都没有？ 【课标：必修第二册 · 第五章 化工生产中的重要非金属元素 · 第二节 氮及其化合物 · 一氧化氮和二氧化氮、硝酸】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/nitric-lab-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/nitric-lab-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-centripetal-step",
+      "title": "探究向心力大小与半径、角速度、质量的关系 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识演示器",
+        "仪器自检",
+        "质量关系"
+      ],
+      "description": "这台手摇的演示器只给你两个标尺上的格数——能不能用它把 F 与 m、r、ω 的定量关系量出来？ 【课标：必修第二册 · 第六章 圆周运动 · 第二节 向心力 · 实验：探究向心力大小与半径、角速度、质量的关系】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/centripetal-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/centripetal-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-self-induction-step",
+      "title": "自感与涡流 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与实验",
+        "认识器材",
+        "通电自感",
+        "断电自感"
+      ],
+      "description": "线圈里只是多绕了几圈铜线，为什么两只灯泡亮得不一样？开关已经断开了，灯泡凭什么还能再亮一下？ 【课标：选择性必修第二册 · 第二章 电磁感应 · 第四节 互感和自感】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/self-induction-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/self-induction-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-emf-step",
+      "title": "测电源电动势和内阻 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与实验",
+        "认识接法",
+        "先到最大",
+        "多测几组"
+      ],
+      "description": "一节旧干电池的电动势和内阻，怎么用一只电压表、一只电流表和一个滑动变阻器「测」出来？换一种接法，测出来的还一样吗？ 【课标：必修第三册 · 第十二章 电能 能量守恒定律 · 第三节 实验：电池电动势和内阻的测量】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/emf-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/emf-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-impulse-step",
+      "title": "神经冲动的产生和传导 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "biology",
+      "subjectLabel": "生物",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "神经冲动",
+        "静息电位",
+        "动作电位"
+      ],
+      "description": "发令枪响后 0.1 s 内起跑就算抢跑（教材 p.27）——兴奋在身体里怎样「跑」过去？ 【课标：选择性必修1 稳态与调节 · 第2章 神经调节 · 第3节 神经冲动的产生和传导】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/impulse-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/impulse-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-bromine-step",
+      "title": "海水提溴：空气吹出法 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "工业流程",
+        "全场",
+        "酸化",
+        "氧化"
+      ],
+      "description": "海水里的溴只有 65 mg/L，怎么把它变成一瓶液溴？ 【课标：必修第二册 · 第八章 化学与可持续发展 · 第一节 自然资源的开发利用 · 海水资源的开发利用】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/bromine-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/bromine-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-thermal-step",
+      "title": "大气热力环流 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "温差",
+        "高空",
+        "近地面"
+      ],
+      "description": "台湾海峡两岸的风向，为什么一天里会反过来？ 【课标：必修第一册 · 第二章 地球上的大气 · 第二节 大气受热过程和大气运动 · 热力环流】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/thermal-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/thermal-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-sodium-step",
+      "title": "金属钠的性质（含钠着火扑救） (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识实验",
+        "银白变暗",
+        "泡在煤油里"
+      ],
+      "description": "一块银白色的小金属，为什么必须泡在煤油里，着火时连水都不能浇？ 【课标：必修第一册 · 第二章 海水中的重要元素——钠和氯 · 第一节 钠及其化合物 · 活泼的金属单质——钠】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/sodium-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/sodium-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-sulfur-step",
+      "title": "硫、二氧化硫、浓硫酸的性质与不同价态含硫物质的转化 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "整套装置",
+        "硫粉 + 铁粉",
+        "浓硫酸与铜"
+      ],
+      "description": "同样是硫，为什么有时它是黄色固体、有时让品红褪成无色、有时又跑进铁粉里？ 【课标：必修第二册 · 第五章 化工生产中的重要非金属元素 · 第一节 硫及其化合物】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/sulfur-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/sulfur-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-wind-step",
+      "title": "大气的水平运动——风 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "等压线",
+        "梯度力",
+        "地转偏向"
+      ],
+      "description": "天气图上的风，为什么不是从高压直直吹向低压？ 【课标：必修第一册 · 第二章 地球上的大气 · 第二节 大气受热过程和大气运动 · 大气的水平运动——风】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/wind-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/wind-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-corrosion-step",
+      "title": "吸氧腐蚀与暖贴的设计 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "台面四站",
+        "液柱为什么升",
+        "碳粉的角色"
+      ],
+      "description": "铁生锈这么慢的事，凭什么能做出一个 45 ℃ 以上的暖贴？又凭什么反过来用它保护铁不生锈？ 【课标：选择性必修1 化学反应原理 · 第四章 化学反应与电能 · 第三节 金属的腐蚀与防护 · 研究与实践：暖贴的设计与制作】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/corrosion-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/corrosion-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-enzyme-step",
+      "title": "影响酶活性的条件 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "biology",
+      "subjectLabel": "生物",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "认识实验台",
+        "温度",
+        "pH"
+      ],
+      "description": "同一支酶，为什么放进沸水里就再也救不回来，放进冰水里却还能醒过来？ 【课标：必修1 分子与细胞 · 第5章 细胞的能量供应和利用 · 第1节 降低化学反应活化能的酶 · 探究·实践：影响酶活性的条件】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/enzyme-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/enzyme-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-chlor-alkali-step",
+      "title": "氯碱工业 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "工业流程",
+        "三样产品",
+        "先洗盐",
+        "剖开槽"
+      ],
+      "description": "同样的电，怎样换来更多烧碱、更少电耗，又不出事故？ 【课标：选择性必修1 化学反应原理 · 第四章 化学反应与电能 · 第二节 电解池 · 电解饱和食盐水】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/chlor-alkali-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/chlor-alkali-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-hou-soda-step",
+      "title": "侯氏制碱 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "chemistry",
+      "subjectLabel": "化学",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "工业流程",
+        "从盐到碱",
+        "先氨后碳",
+        "为什么它自己析出"
+      ],
+      "description": "怎样用食盐和氨造出纯碱，还顺手拿到氮肥？ 【课标：必修第一册 · 第二章 海水中的重要元素——钠和氯 · 第一节 钠及其化合物 · 情境素材：侯氏制碱法】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/hou-soda-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/hou-soda-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-brownian-step",
+      "title": "布朗运动与扩散 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "physics",
+      "subjectLabel": "物理",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "看见它在动",
+        "30 秒一个点",
+        "越久越远"
+      ],
+      "description": "看不见的分子，凭什么说它在乱动？ 【课标：选择性必修第三册 · 第一章 分子动理论 · 第一节 分子动理论的基本内容】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/brownian-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/brownian-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-water-cycle-step",
+      "title": "水循环的过程与地理意义 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "全景",
+        "蒸发",
+        "蒸腾"
+      ],
+      "description": "江河不断注入大海，为什么大海的水没有增多？ 【课标：必修第一册 · 第三章 地球上的水 · 第一节 水循环】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/water-cycle-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/water-cycle-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
+    },
+    {
+      "id": "tj-circulation-step",
+      "title": "气压带、风带与三圈环流 (3D)",
+      "source": "tongjiang-lab",
+      "sourceLabel": "铜匠 3D",
+      "subject": "earth",
+      "subjectLabel": "地理/地科",
+      "grade": [
+        "高中"
+      ],
+      "tags": [
+        "原理与现象",
+        "赤道低压",
+        "30° 下沉",
+        "60° 爬升"
+      ],
+      "description": "麦哲伦船队为什么有的航段逆风、有的顺风，到了 30°S 附近却寸步难行？ 【课标：选择性必修1 自然地理基础 · 第三章 大气的运动 · 第二节 气压带和风带】",
+      "onlineUrl": "./packages/tongjiang-lab/courses/circulation-step.html",
+      "localUrl": "./packages/tongjiang-lab/courses/circulation-step.html",
+      "repoUrl": "https://github.com/sdvch/tongjiang-lab"
     }
   ]
 }
