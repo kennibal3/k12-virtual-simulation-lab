@@ -12,11 +12,9 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
-  sync-and-deploy:
+  sync-upstreams:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository with submodules
@@ -48,11 +46,3 @@ jobs:
           else
             echo "No upstream changes detected."
           fi
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
